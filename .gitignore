@@ -1,1 +1,8 @@
 node_modules
+# Environment (KHÔNG commit — chứa token!)
+.env
+.env.local
+.env.*.local
+
+# Build output
+.sanity/
