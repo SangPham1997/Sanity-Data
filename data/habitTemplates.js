@@ -1,0 +1,76 @@
+export const habitTemplates = [
+  {
+    name: 'Tập thể dục 10 phút',
+    icon: 'fa-dumbbell',
+    color: '#10b981',
+    category: 'Fitness',
+    twoMinuteTask: 'Lấy áo tập ra',
+  },
+  {
+    name: 'Uống đủ 2L nước',
+    icon: 'fa-droplet',
+    color: '#3b82f6',
+    category: 'Health',
+    twoMinuteTask: 'Uống 1 ly nước',
+  },
+  {
+    name: 'Đi ngủ trước 23h',
+    icon: 'fa-moon',
+    color: '#8b5cf6',
+    category: 'Sleep',
+    twoMinuteTask: 'Tắt điện thoại',
+  },
+  {
+    name: 'Đọc sách 15 phút',
+    icon: 'fa-book',
+    color: '#f59e0b',
+    category: 'Learning',
+    twoMinuteTask: 'Mở sách ra',
+  },
+  {
+    name: 'Thiền 5 phút',
+    icon: 'fa-spa',
+    color: '#ec4899',
+    category: 'Mindfulness',
+    twoMinuteTask: 'Ngồi xuống yên tĩnh',
+  },
+  {
+    name: 'Đi bộ 3000 bước',
+    icon: 'fa-shoe-prints',
+    color: '#06b6d4',
+    category: 'Fitness',
+    twoMinuteTask: 'Xỏ giày',
+  },
+];
+
+export const habitIcons = [
+  'fa-dumbbell',
+  'fa-droplet',
+  'fa-moon',
+  'fa-book',
+  'fa-spa',
+  'fa-shoe-prints',
+  'fa-apple-whole',
+  'fa-brain',
+  'fa-bed',
+  'fa-person-running',
+  'fa-heart-pulse',
+  'fa-leaf',
+  'fa-mug-hot',
+  'fa-utensils',
+  'fa-pills',
+  'fa-tooth',
+];
+
+export const habitColors = [
+  '#10b981',
+  '#3b82f6',
+  '#8b5cf6',
+  '#f59e0b',
+  '#ec4899',
+  '#06b6d4',
+  '#ef4444',
+  '#84cc16',
+  '#14b8a6',
+  '#f97316',
+];

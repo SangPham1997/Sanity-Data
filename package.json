@@ -1,0 +1,32 @@
+{
+  "name": "sanity-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Homecycle Sanity Studio",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "type-check": "tsc --noEmit",
+    "migrate": "tsx scripts/migrateData.ts"
+  },
+  "dependencies": {
+    "@sanity/client": "^8.14.1",
+    "@sanity/vision": "^6.21.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sanity": "^6.21.0",
+    "styled-components": "^6.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "dotenv": "^18.0.9",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
