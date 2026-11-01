@@ -1,5 +1,15 @@
-import exercise from './exercise'
-import karateSession from './karateSession'
-import workoutProgram from './workoutProgram'
+import { exerciseType } from './exercise'
+import { karateSessionType } from './karateSession'
+import { workoutProgramType } from './workoutProgram'
+import { workoutWeekType } from './workoutWeek'
+import { exerciseCategoryType } from './exerciseCategory'
+import { siteSettingsType } from './siteSettings'
 
-export const schemaTypes = [exercise, karateSession, workoutProgram]
+export const schemaTypes = [
+  exerciseType,
+  karateSessionType,
+  workoutProgramType,
+  workoutWeekType,
+  exerciseCategoryType,
+  siteSettingsType,
+]

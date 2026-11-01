@@ -1,19 +1,53 @@
-export default {
-  name: 'workoutProgram', title: 'Workout Program', type: 'document',
+import { defineType, defineField, defineArrayMember } from 'sanity'
+
+export const workoutProgramType = defineType({
+  name: 'workoutProgram',
+  title: 'Workout Program',
+  type: 'document',
   fields: [
-    { name: 'id', title: 'ID', type: 'string' },
-    { name: 'title', title: 'Title', type: 'string' },
-    { name: 'subtitle', title: 'Subtitle', type: 'string' },
-    { name: 'accent', title: 'Accent', type: 'string' },
-    { name: 'groupBy', title: 'Group By', type: 'string' },
-    { name: 'groups', title: 'Groups', type: 'array', of: [{ type: 'object', fields: [
-      { name: 'id', title: 'ID', type: 'string' },
-      { name: 'label', title: 'Label', type: 'string' },
-      { name: 'short', title: 'Short', type: 'string' },
-      { name: 'icon', title: 'Icon', type: 'string' },
-      { name: 'description', title: 'Description', type: 'text' },
-    ] }] },
-    { name: 'items', title: 'Items', type: 'array', of: [{ type: 'reference', to: [{ type: 'exercise' }] }] },
+    defineField({ name: 'title', title: 'Tên chương trình', type: 'string', validation: (r) => r.required() }),
+    defineField({ name: 'subtitle', title: 'Phụ đề', type: 'string' }),
+    defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'title' } }),
+    defineField({ name: 'description', title: 'Mô tả', type: 'text' }),
+    defineField({ name: 'accent', title: 'Màu chủ đề', type: 'string' }),
+    defineField({ name: 'groupBy', title: 'Group By', type: 'string' }),
+    defineField({
+      name: 'programType',
+      title: 'Loại chương trình',
+      type: 'string',
+      options: { list: ['weekly', 'library', 'karate'] },
+    }),
+    defineField({
+      name: 'groups',
+      title: 'Nhóm',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'object',
+          fields: [
+            { name: 'id', title: 'ID', type: 'string' },
+            { name: 'label', title: 'Label', type: 'string' },
+            { name: 'short', title: 'Short', type: 'string' },
+            { name: 'icon', title: 'Icon', type: 'string' },
+            { name: 'description', title: 'Description', type: 'text' },
+          ],
+        }),
+      ],
+    }),
+    defineField({
+      name: 'items',
+      title: 'Items',
+      type: 'array',
+      of: [defineArrayMember({ type: 'reference', to: [{ type: 'exercise' }, { type: 'karateSession' }] })],
+    }),
+    defineField({ name: 'weeks', title: 'Các tuần', type: 'array', of: [defineArrayMember({ type: 'reference', to: [{ type: 'workoutWeek' }] })] }),
+    defineField({ name: 'categories', title: 'Danh mục', type: 'array', of: [defineArrayMember({ type: 'reference', to: [{ type: 'exerciseCategory' }] })] }),
+    defineField({ name: 'order', title: 'Thứ tự', type: 'number' }),
+    defineField({ name: 'isActive', title: 'Kích hoạt', type: 'boolean', initialValue: true }),
   ],
-  preview: { select: { title: 'title', subtitle: 'accent' } },
-}
+  preview: {
+    select: { title: 'title', subtitle: 'programType' },
+  },
+})
+
+export default workoutProgramType
