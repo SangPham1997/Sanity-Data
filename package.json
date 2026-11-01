@@ -13,7 +13,15 @@
     "mv": "tsx scripts/migrate-and-verify.ts",
     "mv:clear": "tsx scripts/migrate-and-verify.ts --clear",
     "mv:dry": "tsx scripts/migrate-and-verify.ts --dry",
-    "mv:sample": "tsx scripts/migrate-and-verify.ts --clear --sample"
+    "mv:sample": "tsx scripts/migrate-and-verify.ts --clear --sample",
+    "mv:safe": "tsx scripts/safeMigrate.ts",
+    "mv:safe:dry": "tsx scripts/safeMigrate.ts --dry",
+    "patch:spine": "tsx scripts/patchSpineProgram.ts",
+    "patch:spine:dry": "tsx scripts/patchSpineProgram.ts --dry",
+    "clear": "tsx scripts/clearData.ts",
+    "clear:execute": "tsx scripts/clearData.ts --execute",
+    "clear:force": "tsx scripts/clearData.ts --execute --yes",
+    "clear:assets": "tsx scripts/clearData.ts --execute --assets"
   },
   "dependencies": {
     "@sanity/client": "^8.14.1",
