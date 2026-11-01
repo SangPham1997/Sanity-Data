@@ -9,7 +9,11 @@
     "build": "sanity build",
     "deploy": "sanity deploy",
     "type-check": "tsc --noEmit",
-    "migrate": "tsx scripts/migrateData.ts"
+    "migrate": "tsx scripts/migrateData.ts",
+    "mv": "tsx scripts/migrate-and-verify.ts",
+    "mv:clear": "tsx scripts/migrate-and-verify.ts --clear",
+    "mv:dry": "tsx scripts/migrate-and-verify.ts --dry",
+    "mv:sample": "tsx scripts/migrate-and-verify.ts --clear --sample"
   },
   "dependencies": {
     "@sanity/client": "^8.14.1",

@@ -1,13 +1,12 @@
 export default {
-  name: 'exercise',
-  title: 'Exercise',
-  type: 'document',
+  name: 'exercise', title: 'Exercise', type: 'document',
   fields: [
     { name: 'id', title: 'ID', type: 'string' },
+    { name: 'week', title: 'Week', type: 'number' },
     { name: 'name', title: 'Name', type: 'string' },
     { name: 'subName', title: 'Sub Name', type: 'string' },
     { name: 'target', title: 'Target', type: 'string' },
-    { name: 'mode', title: 'Mode', type: 'string' },
+    { name: 'mode', title: 'Mode', type: 'string', options: { list: ['time', 'reps'] } },
     { name: 'duration', title: 'Duration', type: 'number' },
     { name: 'sets', title: 'Sets', type: 'number' },
     { name: 'reps', title: 'Reps', type: 'number' },
@@ -17,7 +16,6 @@ export default {
     { name: 'svg', title: 'SVG', type: 'string' },
     { name: 'category', title: 'Category', type: 'string' },
     { name: 'videoUrl', title: 'Video URL', type: 'url' },
-    { name: 'week', title: 'Week', type: 'number' },
     { name: 'level', title: 'Level', type: 'number' },
     { name: 'equipment', title: 'Equipment', type: 'string' },
     { name: 'bar', title: 'Bar', type: 'string' },
@@ -26,5 +24,7 @@ export default {
     { name: 'safety', title: 'Safety', type: 'text' },
     { name: 'regression', title: 'Regression', type: 'string' },
     { name: 'progression', title: 'Progression', type: 'string' },
+    { name: 'groupId', title: 'Group ID', type: 'string' },
   ],
+  preview: { select: { title: 'name', subtitle: 'category' } },
 }

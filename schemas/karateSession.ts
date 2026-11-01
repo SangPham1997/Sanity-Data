@@ -1,7 +1,5 @@
 export default {
-  name: 'karateSession',
-  title: 'Karate Session',
-  type: 'document',
+  name: 'karateSession', title: 'Karate Session', type: 'document',
   fields: [
     { name: 'id', title: 'ID', type: 'string' },
     { name: 'name', title: 'Name', type: 'string' },
@@ -22,19 +20,12 @@ export default {
     { name: 'order', title: 'Order', type: 'number' },
     { name: 'focus', title: 'Focus', type: 'array', of: [{ type: 'string' }] },
     { name: 'techniques', title: 'Techniques', type: 'array', of: [{ type: 'string' }] },
-    { 
-      name: 'exercises', 
-      title: 'Exercises', 
-      type: 'array', 
-      of: [{ 
-        type: 'object',
-        fields: [
-          { name: 'name', title: 'Name', type: 'string' },
-          { name: 'work', title: 'Work', type: 'string' },
-          { name: 'note', title: 'Note', type: 'text' },
-          { name: 'videoUrl', title: 'Video URL', type: 'url' },
-        ]
-      }] 
-    },
+    { name: 'exercises', title: 'Exercises', type: 'array', of: [{ type: 'object', fields: [
+      { name: 'name', title: 'Name', type: 'string' },
+      { name: 'work', title: 'Work', type: 'string' },
+      { name: 'note', title: 'Note', type: 'text' },
+      { name: 'videoUrl', title: 'Video URL', type: 'url' },
+    ] }] },
   ],
+  preview: { select: { title: 'name', subtitle: 'track' } },
 }

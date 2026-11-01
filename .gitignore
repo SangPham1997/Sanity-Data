@@ -1,4 +1,6 @@
-node_modules
+# Dependencies
+node_modules/
+
 # Environment (KHÔNG commit — chứa token!)
 .env
 .env.local
@@ -6,3 +8,27 @@ node_modules
 
 # Build output
 .sanity/
+dist/
+dist-ssr/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Cache
+.cache/
+.parcel-cache/
+.turbo/
